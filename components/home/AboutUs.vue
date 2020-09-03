@@ -1,28 +1,123 @@
 <template>
   <div class="block-about">
-    <!--<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffffff" fill-opacity="1" d="M0,128L48,117.3C96,107,192,85,288,106.7C384,128,480,192,576,202.7C672,213,768,171,864,165.3C960,160,1056,192,1152,208C1248,224,1344,224,1392,224L1440,224L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>-->
-    <div class="content">
+    <div class="container">
       <hgroup>
-        <p>OUR SERVICES</p>
-        <h2>OUR SERVICES</h2>
+        <p>ABOUT US</p>
+        <h2>MY LOCATION</h2>
       </hgroup>
 
-      <div class="list">
-        <div class="item" v-for="list in 6">
-          <h3>What is Lorem Ipsum?</h3>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</p>
+      <div class="map">
+        <img src="../../static/images/bg-map.svg" alt="3XL team location">
+
+        <span class="country"><i class="icon"></i> Việt Nam</span>
+      </div>
+
+      <div class="list grid gap-4 grid-cols-1 sm:grid-cols-4">
+        <div class="item">
+          <span>2+</span>
+          <span>YEARS</span>
+        </div>
+
+        <div class="item">
+          <span>2+</span>
+          <span>PROJECTS</span>
+        </div>
+
+        <div class="item">
+          <span>5+</span>
+          <span>EMPLOYEE</span>
+        </div>
+
+        <div class="item">
+          <span>1</span>
+          <span>OFFICE</span>
         </div>
       </div>
     </div>
-
-    <!--<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#fff" fill-opacity="1" d="M0,192L60,197.3C120,203,240,213,360,208C480,203,600,181,720,154.7C840,128,960,96,1080,101.3C1200,107,1320,149,1380,170.7L1440,192L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>-->
   </div>
 </template>
+
 <style>
   .block-about {
-    @apply py-20;
+    @apply py-40 text-white;
+  }
 
-    background-color: #09f;
+  .block-about .map {
+    @apply relative;
+
+    height: 700px;
+  }
+
+  .block-about .map img {
+    @apply w-full h-full object-fill;
+  }
+
+  .block-about .map .country {
+    @apply absolute;
+
+    right: 25%;
+    top: 48%;
+    color: #ff1a7d;
+    display: flex;
+    align-items: center;
+  }
+
+  .block-about .map .icon {
+    width: 30px;
+    height: 30px;
+    position: relative;
+  }
+
+  .block-about .map .icon::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #ff1a7d;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+  }
+
+  .block-about .map .icon::after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: rgba(255, 26, 125, 0.3);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    animation: zoomSize3 2s infinite;
+  }
+
+  .block-about .list {
+    @apply -mt-12 ml-auto mr-auto;
+
+    max-width: 1000px;
+  }
+
+  .block-about .list .item {
+    @apply flex flex-col align-middle justify-center p-16 text-center transition-all duration-300 tracking-wider;
+
+    border: 1px solid #fff;
+  }
+
+  .block-about .list .item:hover {
+    transform: translateY(-2rem);
+    border-color: #ff1a7d;
+  }
+
+  .block-about .list .item span:first-child {
+    @apply font-bold text-6xl;
+
+    color: #ff1a7d;
+  }
+
+  .block-about .list .item span:last-child {
+    @apply font-medium;
   }
 
 </style>

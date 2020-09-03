@@ -40,5 +40,33 @@
     @apply mb-8;
   }
 
+  .container {
+    @apply px-10 max-w-full mx-auto;
+  }
+
+  @-webkit-keyframes zoomSize3 {
+    0% {
+      opacity: 0;
+      height: 0;
+      width: 0;
+    }
+    50% {
+      opacity: 1;
+      height: 1.625rem;
+      width: 1.625rem;
+    }
+  }
+  @keyframes zoomSize3 {
+    0% {
+      opacity: 0;
+      height: 0;
+      width: 0;
+    }
+    50% {
+      opacity: 1;
+      height: 1.625rem;
+      width: 1.625rem;
+    }
+  }
 
 </style>

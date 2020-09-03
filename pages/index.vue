@@ -6,7 +6,7 @@
     <!--Main-->
     <main>
       <Banner />
-      <Solution />
+      <Myteam />
       <AboutUs />
       <Services />
     </main>

@@ -6,7 +6,7 @@
 
 <style>
   footer {
-    @apply text-center mt-auto py-2;
+    @apply text-center mt-auto py-2 text-white;
 
     border-top: 1px solid #ccc;
   }

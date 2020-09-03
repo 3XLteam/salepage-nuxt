@@ -1,6 +1,6 @@
 <template>
   <div class="block-services">
-    <div class="content">
+    <div class="container">
       <hgroup>
         <p>OUR SERVICES</p>
         <h2>OUR SERVICES</h2>
@@ -18,11 +18,22 @@
 
 <style>
   .block-services {
-    @apply bg-white text-black py-20;
+    @apply bg-white text-black py-40;
   }
 
   .block-services .list {
     @apply grid grid-cols-3 gap-8;
+  }
+
+  .block-services .list .item {
+    padding: 2rem;
+    border: 1px solid #ccc;
+    transition: all 0.3s ease;
+  }
+
+  .block-services .list .item:hover {
+    background-color: #008aff;
+    color: #fff;
   }
 
 
